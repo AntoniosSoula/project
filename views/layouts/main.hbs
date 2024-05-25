@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/css/style.css">
+
+    {{#if style1}}
+        <link rel="stylesheet" href="/css/{{style1}}.css">
+    {{/if}}
+    {{#if style2}}
+        <link rel="stylesheet" href="{{style2}}">
+    {{/if}}
+
+
+</head>
+
+<body class="background">
+  <div class="navbar">
+    <a href="/"><img src="/images/home.png" alt="home"></a>
+    <div class="subnav">
+      <button class="subnavbtn">Πληροφορίες</button>
+      <div class="subnav-content">
+        <a href="/knowing">Γνωρισέ μας...</a>
+        <a href="/sightseeings">Αξιοθέατα</a>
+      </div>
+    </div>
+    <a href="/aox">Αθλητισμός</a>
+    <div class="subnav">
+    <button class="subnavbtn">Εστίαση</button>
+    <div class="subnav-content">
+      <a href="/pota">Καφές-Μπαρ</a>
+      <a href="/restaurants">Φαγητό</a>
+    </div>
+  </div>
+    <a href="/home">Διαμονή</a>
+    <a href="/contact">Επικοινωνία</a>
+    <a href="/photos">Φωτογραφίες</a>
+  </div>
+  <div class="login">
+    {{#unless have_an_user}}
+    <a href="/login"><img src="/images/login2.png" alt="login2"></a>
+    {{/unless}}
+      {{#if have_an_user}}
+    <form action="/logout" method="post">
+        <button type="submit" class="logout-btn"></button>
+    </form>
+    {{/if}}
+  </div>
+
+  <div>
+    {{{body}}}
+  </div>
+  
+<script src='/js/{{js}}'></script>
+
+</body> 
+</html>

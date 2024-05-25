@@ -1,0 +1,47 @@
+
+<main class="contact">
+    <h1>Επικοινωνία</h1>
+    <p>Στόχος μας είναι να γινόμαστε καλύτεροι για να γεμίζετε με όμορφες εμπερίες από τον τόπο μας</p>
+    <p>Μοιραστείτε μαζί μας τις εμπερίες σας από την επισκεψή σας στο Ξυλόκαστρο</p>
+    <div id="chat-container">
+      <button class="add-comment" type="submit">Προσθέστε Σχόλιο</button>
+      <div id="commentMessage"> {{message2}}</div>
+    </div>
+
+    <form action="/contact" id="comment-container" method="post">
+          <h2>Τα σχόλια σας</h2>
+        <textarea id="newcomment" name="newcomment" rows="4" cols="50" placeholder="Πείτε μας την εμπερία σας(Μέχρι 200 χαρακτήρες)"></textarea>
+        <button class="new-comment-button" type="submit">Υποβολή</button>
+        
+    </form>
+
+   
+<div class="users-comments">
+        <div class="comments-title">Σχόλια {{length}}</div>
+{{#each comments}}
+    <div class="comment">
+        <div class="comment-username">
+            <p>{{this.username}} </p>
+            <p>{{this.created}}</p>
+        </div>
+        <div class="comment-text">
+            {{this.comment}}
+        </div>
+                {{#if this.displays}}
+                    <form action="/delete-comment" method="post">
+                        <input type="hidden" name="commentId" value="{{this.id}}">
+                        <button type="submit" id="delete-button">Αφαίρεση</button>
+                    </form>
+                {{/if}}
+
+    </div>
+{{/each}}
+    </div>
+</main>
+
+
+
+
+
+
+

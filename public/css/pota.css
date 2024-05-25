@@ -1,0 +1,49 @@
+
+.highlight {
+    color: rgb(60,110,113);
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }  
+
+  .row img {
+    --s: 250px;   
+    width: var(--s);
+    aspect-ratio: 1;
+    outline: calc(var(--s)/2) solid #0009;
+    outline-offset: calc(var(--s)/-2);
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+  }
+  
+  .row img:hover {
+    
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+  }
+
+  .pota{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.7);
+
+  }
+ 
+  .row {
+    display: flex;
+    margin: 10px;
+    padding-bottom: 40px;
+    flex-direction:column;
+  }
+  

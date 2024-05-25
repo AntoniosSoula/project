@@ -1,0 +1,43 @@
+
+.sightseeings .mustvisit{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'Times New Roman', Times, serif;
+    font-size:medium; 
+    font-style: italic;
+    padding:3em 3em 3em 0.5em;
+    margin-top: 0;
+    width:80%;
+    border-radius: 0 12em 12em 0;
+    box-sizing: border-box;  
+    margin-right: 40px;
+  }
+  .mustvisit[blue] {
+    background-color: rgb(60, 110, 113);
+  
+  }
+  .sightseeings .mustvisit{
+    display:flex;
+    flex-direction: row;
+    
+  }
+  .sightseeings{
+    margin-bottom: 100px;
+    display:flex;
+    flex-direction: column;
+    transition: 1s ease 0s ;
+  
+  }
+  .sightseeings img{
+    height: 250px;
+    border-radius: 50%;
+    outline:solid white;
+    box-shadow:2px 2px 4px black ;
+    margin-left: 10px;
+    margin-right:10px;
+  
+  }
+  .sightseeings img:hover{
+    transform: scaleX(-1);
+  }
+  
+  

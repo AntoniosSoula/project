@@ -1,0 +1,23 @@
+<div class="container">
+    <!-- Data or Content -->
+    <div class="box-1">
+        <div class="content-holder">
+            <h2>Καλώς Ορίσατε!</h2>
+            <button class="button-2" onclick="login()">Login</button>
+        </div>
+    </div>
+
+   <div class="box-2">
+    <div class="signup-form-container">
+        <h1>Sign Up Form</h1>
+        <form action="/signup" id="signupForm" method="post">
+            <input type="text" placeholder="Username" class="input-field" name="username"><br><br>
+            <input type="email" placeholder="Email" class="input-field" name="email"><br><br>
+            <input type="password" placeholder="Password" class="input-field" name="password"><br><br>
+            <button class="signup-button" type="submit">Sign Up</button>
+        </form>
+    </div>
+    <div id="loginMessage">
+        {{message}}<!-- This element is for displaying messages, it seems like a placeholder -->
+    </div>
+</div>

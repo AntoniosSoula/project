@@ -1,0 +1,162 @@
+
+body{
+  margin:0;
+}
+
+.background {
+  background-image: url("/images/xylokastro.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  filter: contrast(150%);
+  height: 100vh; /* Αλλάξτε το ύψος ανάλογα με τις ανάγκες σας */
+
+}
+
+
+
+h1{
+  color: rgba(255, 255, 255, 0.8); /* Χρώμα κειμένου με διαφάνεια */
+  font-size:300%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-align:center;
+  position: relative;
+  padding-top: 15px;
+}
+h1::first-letter{ font-size:80px;}
+h3{
+  color: rgba(255, 255, 255, 0.8); /* Χρώμα κειμένου με διαφάνεια */
+  font-size:40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-align:left;
+  position: relative;
+  padding-top: 15px;
+}
+h3::first-letter{ font-size:50px;}
+
+.navbar {
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  outline:1px solid white;
+
+}
+.navbar a img{
+  max-height:18px;  
+  vertical-align: middle;
+  border-radius:30px; /* Κυκλικό border */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Σκίαση */
+  
+
+} 
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  text-shadow:2px 2px 5px black;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* The subnavigation menu */
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  text-shadow:2px 2px 5px black;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn:hover {
+  background-color: rgba(60, 110, 113, 0.8);
+  text-decoration: none;
+  color: white;
+ 
+}
+.subnavbtn button:hover{
+  display:border-box;
+ 
+}
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: rgb(60, 110, 113);
+  width: 100%;
+  z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+  
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}  
+
+.login img {
+  width: 50px;                
+  margin-left: 1%;          
+  margin-top: 3%;   
+  transition: all 0.3s;
+  border: none;
+  outline: none;
+  transition: all 0.3s         
+}
+
+.login img:active {
+
+  transform: scale(0.9); 
+}
+.logout-btn {
+  background-image: url("/images/logout.png");
+  margin-top: 3%;
+  margin-left: 1%;
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  outline: none;  
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+
+.logout-btn:active {
+  transform: scale(0.5); 
+}

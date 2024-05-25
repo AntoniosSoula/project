@@ -1,0 +1,216 @@
+ 
+  
+  .mySlides {display: none}
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+ 
+
+.intro p {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+
+.app {
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header h2, .header h3 {
+  margin: 0;
+}
+
+
+.input-div{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px dashed #555;
+  background-color: rgba(255,255,255,0.1);
+  position: relative;
+  margin-bottom: 10px;
+}
+.queued-div{
+  width: 100%;
+  height: 200px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.input-div:hover{
+  background-color: rgba(255,255,255,0.8);
+}
+.input-div .browse {
+  color: #555;
+  font-weight: bold;
+}
+
+.file {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.queued-div .image {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.queued-div .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.queued-div .image span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  color:rgb(0, 0, 0); ;
+  padding: 5px;
+}
+
+.input-div h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.input-div input {
+  display: none;
+}
+
+.input-div{
+  cursor:pointer;
+}
+/* Στυλ για το κουμπί "Upload" */
+#queued-form button[type="submit"] {
+  background-color:  rgb(60, 110, 113);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#queued-form button[type="submit"]:active {
+  transform: scale(0.9); 
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text { font-size: 11px }
+}
+
+

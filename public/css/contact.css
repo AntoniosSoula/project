@@ -1,0 +1,119 @@
+
+.contact{
+  display:flex;
+  flex-direction: column;
+}
+.contact p{
+  display:flex;
+  flex-direction: center;
+  justify-content: center;
+  color:white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:larger;
+  font-weight: bold; 
+  font-style: italic;
+  text-shadow:5px 5px 10px rgb(0,0,0);
+}
+#chat-container button,#comment-container button{
+
+  color: white;
+  font-size: 14px;
+  padding: 13px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 7px;
+  border: none;
+  width: 250px;
+  outline: none;
+  background-color: rgb(6, 108, 100); 
+  margin: 4px 2px;
+  transition: all 0.3s;
+}
+#comment-container button{
+  margin:2%;
+  width:80%;
+  max-width:250px;
+}
+#chat-container button:active {
+  transform: scale(0.9); 
+}
+#comment-container button:active {
+  transform: scale(0.9); 
+}
+#comment-container form{
+  display: flex;
+  flex-direction: column;
+  
+}
+#comment-container{
+  display: none;
+  width:50%;
+  margin:2%;
+  margin-left: 0;
+  padding:10px;
+  background-color:white ;
+  overflow: hidden;
+  position: relative; /* Add position relative */
+  z-index: 1;
+  transition: display 0.5s ease;
+}
+#comment-container.visible {
+  display: block; /* εμφάνιση μετά την προσθήκη της κλάσης */
+}
+.new-comment-button{
+  justify-content: center;
+  align-items: center;
+  width:80%;
+ 
+}
+#comment-container textarea{
+  border-radius:8px;
+  width: calc(100% - 26px);
+}
+.users-comments {
+  position:relative;
+  top: calc(100vh - 50%);
+  margin-bottom: 0;
+  width: 100%;
+  z-index: 0;
+  background-color: transparent;
+}
+.comment-username{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+.comment-username p{
+  font-weight:bold;
+  font-style:italic;
+  color:rgba(0, 0, 0, 0.608);
+  margin-left: 1px;
+}
+.comment{
+  background-color: rgba(255,255,255,0.9);
+  outline:solid grey 1px;
+  margin:10px;
+  padding: 2px;
+  box-shadow: 5px 6px 6px 2px rgba(0, 0, 0, 0.608);
+}
+.comments-title{
+  font-weight:bold;
+  font-size:20px;
+  margin:10px;
+}
+#delete-button{
+ color: rgb(6, 108, 100);
+ transition: all 0.3s;
+ border: none;
+ outline: none;
+ background-color: transparent;
+}
+#delete-button:hover{
+  text-decoration-line: underline;
+
+  cursor:grab;
+}
+#delete-button:active{
+  cursor:grabbing;
+}
