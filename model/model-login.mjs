@@ -51,7 +51,7 @@ export async function isAdmin(username) {
     try {
         const db = await connectToDatabase();
         const user = await db.get('SELECT * FROM users WHERE username = ?', username);
-        return user && (user.username === 'antoniossoula18' || user.username === 'panagiotasmp10');
+        return user && (user.username === 'panagiotasmp10');
 
     } catch (error) {
         console.error('Error checking administrator status:', error);
