@@ -2,7 +2,7 @@
 
 Show more op ons>Open git bash here 
 
-git clone h ps://github.com/AntoniosSoula/project.git 
+git clone https://github.com/AntoniosSoula/project.git 
 
 cd project/ 
 
